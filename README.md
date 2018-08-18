@@ -21,7 +21,7 @@ First, use an image tool like Photoshop to define where the animation should sta
 ![zoomer_areas](https://projects.thibautfoussard.com/git/zoomer/zoomer_areas.jpg)
 
 
-Then, retrieve its x, y, width and height. They will be used as parameters.
+Then, retrieve the x, y, width and height of the start area. They will later be used as JS parameters.
 
 
 ![zoomer_areas_2](https://projects.thibautfoussard.com/git/zoomer/zoomer_areas_2.jpg)
