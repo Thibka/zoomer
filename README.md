@@ -4,7 +4,7 @@ A CSS scale transition/animation can lead to blurry images.
 
 Besides, when combined with a transform-origin or translate, it can be tricky to precisely anticipate what the result of the scale transformation will be.
 
-This class provides a light and precise zoom/dezoom animation with constant image sharpness.
+This class provides a light and precise zoom/dezoom animation with constant image sharpness. The zoom and dezoom areas can be provided with a tool like Photoshop.
 
 [Demo](https://jsfiddle.net/Wonderbanners/bc2xdsfq/11/).
 
@@ -12,6 +12,20 @@ This class provides a light and precise zoom/dezoom animation with constant imag
 
 Usage
 ==================
+
+Zoom/dezoom areas
+------------------
+First, use an image retouch tool like Photoshop to define where the animation should start and end, on a given image.
+
+
+![zoomer_areas](https://projects.thibautfoussard.com/git/zoomer/zoomer_areas.jpg)
+
+
+
+
+
+Code
+------------------
 
 ```html
 <img id="image" src="image.jpg" style="opacity: 0">
