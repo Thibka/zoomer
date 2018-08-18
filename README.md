@@ -39,7 +39,7 @@ However, the actual rendering will only take place in the canvas, hence the `opa
 
 ```html
 <img id="image" src="image.jpg" style="opacity: 0">
-<canvas id="canvas" class="full"></canvas>
+<canvas id="canvas"></canvas>
 ```
 
 The instantiation is done by passing the coordinates and dimensions of the previously defined start and end areas.
@@ -47,8 +47,8 @@ The instantiation is done by passing the coordinates and dimensions of the previ
 ```javascript
 var zoom = new Zoom({
     format   : {width: 300, height: 250},
-    canvas   : "COM_canvas",
-    img      : "COM_img",
+    canvas   : "canvas",
+    img      : "image",
     start    : {x: 74, y: 30, width: 300, height: 250},
     end      : {x: 0,  y: 0,  width: 448, height: 373},
     duration : 6000,
