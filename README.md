@@ -6,7 +6,7 @@ Besides, when combined with a transform-origin or translate, it can be tricky to
 
 This class provides a light and precise zoom/dezoom animation with constant image sharpness. The zoom and dezoom areas can be provided with a tool like Photoshop.
 
-[Demo](https://jsfiddle.net/Wonderbanners/bc2xdsfq/11/).
+[Demo](https://projects.thibautfoussard.com/git/zoomer/example/).
 
 
 
@@ -15,17 +15,24 @@ Usage
 
 Zoom/dezoom areas
 ------------------
-First, use an image retouch tool like Photoshop to define where the animation should start and end, on a given image.
+First, use an image tool like Photoshop to define where the animation should start and end, on a given image.
 
 
 ![zoomer_areas](https://projects.thibautfoussard.com/git/zoomer/zoomer_areas.jpg)
 
 
+Then, retrieve its x, y, width and height. They will be used as parameters.
 
+
+![zoomer_areas_2](https://projects.thibautfoussard.com/git/zoomer/zoomer_areas_2.jpg)
+
+
+Then do the same for the end area (in green).
 
 
 Code
 ------------------
+First we need to add some HTML.
 
 ```html
 <img id="image" src="image.jpg" style="opacity: 0">
@@ -34,7 +41,7 @@ Code
 
 The `<img>` tag allows the JS class to start its initialization on the `load` event.
 
-However, the actual rendering will only take place in the canvas, hence the `opacity: 0` applied on the `img` tag..
+However, the actual rendering will only take place in the canvas, hence the `opacity: 0` applied on the `img` tag.
 
 ```javascript
 var zoom = new Zoom({
