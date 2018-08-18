@@ -32,16 +32,17 @@ Then do the same for the end area (in green).
 
 Code
 ------------------
-First we need to add some HTML.
+
+An `<img>` tag allows the JS class to start its initialization on the `load` event.
+However, the actual rendering will only take place in the canvas, hence the `opacity: 0` applied on the `img` tag.
+
 
 ```html
 <img id="image" src="image.jpg" style="opacity: 0">
 <canvas id="canvas" class="full"></canvas>
 ```
 
-The `<img>` tag allows the JS class to start its initialization on the `load` event.
-
-However, the actual rendering will only take place in the canvas, hence the `opacity: 0` applied on the `img` tag.
+The instantiation is done by passing the coordinates and dimensions of the previously defined start and end areas.
 
 ```javascript
 var zoom = new Zoom({
