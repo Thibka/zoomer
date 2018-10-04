@@ -32,9 +32,11 @@
             format  : {width: 300, height: 250},
             canvas  : "canvas",
             img     : "image",
-            start   : {x: 1843, y: 448, width: 300, height: 250},
-            end     : {x: 1218, y: 411, width: 600, height: 500},
-            duration: 2000
+            steps   : [
+                {x: 1843, y: 448, width: 300, height: 250},
+                {x: 1000, y: 448, width: 300, height: 250, duration: 2000},
+                {x: 1218, y: 411, width: 600, height: 500, duration: 2000}
+            ],
         });
         
         zoom.start();
