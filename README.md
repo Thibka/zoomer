@@ -53,6 +53,7 @@ var zoom = new Zoom({
     steps    : [
         {x: 74, y: 30, width: 300, height: 250}, // start
         {x: 0,  y: 0,  width: 448, height: 373, duration: 3000}, // next step
+        // add as many steps as needed
     ],
     easing   : function() { } // Optional. easeInOutQuad by default.
 });
