@@ -2,9 +2,9 @@ Description
 ==================
 A CSS scale transition/animation can lead to blurry images.
 
-Besides, when combined with a transform-origin or translate, it can be tricky to precisely anticipate what the result of the scale transformation will be.
+Besides, when combined with a transform-origin or translate, it can be tricky to precisely anticipate what the result of a scale transformation.
 
-This class provides a light and precise zoom/dezoom animation with constant image sharpness. The zoom and dezoom areas can be provided with a tool like Photoshop.
+This class provides a light and precise zoom/dezoom animation with constant image sharpness. The zoom and dezoom areas can be defined with precision with a tool like Photoshop.
 
 [Demo](https://projects.thibautfoussard.com/git/zoomer/example/).
 
@@ -27,7 +27,7 @@ Then, retrieve the x, y, width and height of the start area. They will later be 
 ![zoomer_areas_2](https://projects.thibautfoussard.com/git/zoomer/zoomer_areas_2.jpg)
 
 
-Then do the same for the end area (in green).
+Then do the same for the next step (in green).
 
 
 Code
@@ -43,15 +43,17 @@ However, the actual rendering will only take place in the canvas, hence the `opa
 ```
 
 The instantiation is done by passing the coordinates and dimensions of the previously defined start and end areas.
+At least 2 steps must be defined (a start and an end), but you can add as many as needed. 
 
 ```javascript
 var zoom = new Zoom({
     format   : {width: 300, height: 250},
     canvas   : "canvas",
     img      : "image",
-    start    : {x: 74, y: 30, width: 300, height: 250},
-    end      : {x: 0,  y: 0,  width: 448, height: 373},
-    duration : 6000,
+    steps    : [
+        {x: 74, y: 30, width: 300, height: 250}, // start
+        {x: 0,  y: 0,  width: 448, height: 373, duration: 3000}, // next step
+    ],
     easing   : function() { } // Optional. easeInOutQuad by default.
 });
 	
