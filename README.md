@@ -51,8 +51,8 @@ var zoom = new Zoom({
     canvas   : "canvas",
     img      : "image",
     steps    : [
-        {x: 74, y: 30, width: 300, height: 250}, // start
-        {x: 0,  y: 0,  width: 448, height: 373, duration: 3000}, // next step
+        {width: 300, height: 250, x: 74, y: 30}, // start
+        {width: 448, height: 373, x: 0,  y: 0, duration: 3000}, // next step
         // add as many steps as needed
     ],
     easing   : function() { } // Optional. easeInOutQuad by default.
