@@ -21,7 +21,7 @@ First, use an image tool like Photoshop to define where the animation should sta
 ![zoomer_areas](https://projects.thibautfoussard.com/git/zoomer/zoomer_areas.jpg)
 
 
-Then, retrieve the x, y, width and height of the start area. They will later be used as JS parameters.
+Then, retrieve the width, height, x and y of the start area. They will later be used as JS parameters.
 
 
 ![zoomer_areas_2](https://projects.thibautfoussard.com/git/zoomer/zoomer_areas_2.jpg)
@@ -42,7 +42,7 @@ However, the actual rendering will only take place in the canvas, hence the `opa
 <canvas id="canvas"></canvas>
 ```
 
-The instantiation is done by passing the coordinates and dimensions of the previously defined start and end areas.
+Instanciate by passing the dimensions and coordinates of the previously defined steps.
 At least 2 steps must be defined (a start and an end), but you can add as many as needed. 
 
 ```javascript
